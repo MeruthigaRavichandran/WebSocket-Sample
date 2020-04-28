@@ -3,9 +3,6 @@ target
 gradlew
 gradlew.bat
 gradle
-.mvn
-mvnw.cmd
-mvnw
 settings.gradle
 .idea
 build.gradle
