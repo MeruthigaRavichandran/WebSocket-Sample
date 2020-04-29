@@ -15,17 +15,14 @@ Added posting of messages using @RestController instead of @SendTo annotation
 
 ### Connect with the socket
 
-Once application go started, visit hhttp://localhost:8080
+Once application go started, visit http://localhost:8080
+
+## ws URL
+
+```java
+'ws://localhost:8080/orderStatus
+```
 
 ### To Send Data from Backend to FrontEnd
 
-To send data from backend -> http://localhost:8080/test?name=Dinesh
-
-Replace Dhoni with your data
-
-Data is sent from backend in format 
-
-```
-{"content" : "dhoni"}
-```
-
+http://localhost:8080/status?orderStatus=OPEN&custId=dhoni
