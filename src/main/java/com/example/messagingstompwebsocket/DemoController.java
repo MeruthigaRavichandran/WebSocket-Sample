@@ -20,12 +20,10 @@ public class DemoController {
     @Autowired
     private SimpMessagingTemplate template;
 
-    @RequestMapping("/test")
-    ResponseEntity getMessage(@RequestParam("name") String name) {
+    @RequestMapping("/status")
+    ResponseEntity getMessage(@RequestParam("orderStatus") String orderStatus, @RequestParam("custId") String custId) {
 
-        //template.convertAndSend("/topic/greetings", new Greeting(name));
-
-        template.convertAndSend("/topic/greetings", name);
+        template.convertAndSend("/topic/customer/"+custId, orderStatus);
 
         Map<String, String> map = new HashMap<>();
         map.put("message", "Message sent in websocket");
